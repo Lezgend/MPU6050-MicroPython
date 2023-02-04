@@ -7,23 +7,27 @@ Pin assignment:\
 SCL -> GPIO 22\
 SDA -> GPIO 21\
 self.i2c = SoftI2C(scl=Pin(22), sda=Pin(21), freq=100000)\
+\
+(You can change SCL pin and SDA pin in file MPU6050.py line 73)
 ##
 Initializing the I2C method for ESP8266\
 Pin assignment:\
 SCL -> GPIO 5\
 SDA -> GPIO 4\
-self.i2c = I2C(scl=Pin(5), sda=Pin(4))\
+self.i2c = I2C(scl=Pin(5), sda=Pin(4))
+
+(You can change SCL pin and SDA pin in file MPU6050.py line 79)
 ##
-(You can change SCL pin and SDA pin in file MPU6050.py line 69-79)
-##
-If you working with Thonny (https://thonny.org/). Don't forget to show plotter\
+If you working with Thonny (https://thonny.org/). \
+Don't forget to show plotter\
 Thonny -> View -> Plotter\
+\
 If you want to see data_logs file.\
-Thonny -> View -> Files\
+Thonny -> View -> Files
 ##
 ## Example
-##
-main.py is a very simple example to get started.\
+[main.py](https://github.com/Lezgend/MPU6050-MicroPython/blob/main/main.py) is a very simple example to get started.\
+\
 Everytime you run the code it will keep data_logs{n} file in root (/)\
 {n} means the file number increasing if old data_logs file exist.
 
@@ -93,7 +97,7 @@ with open(filename % i, "w") as f:
         sleep_ms(100)
 ```
 
-Result
+Result of Accelerometer Data:
 
 ```
 x: 0.4668693 y: -2.267309 z: 10.82179
@@ -108,3 +112,46 @@ x: 0.7469909 y: -1.458069 z: 10.89362
 x: 0.4525041 y: -1.625663 z: 10.63744
 ```
 
+Result of Gyroscope Data:
+```
+x: 34.78626 y: -2.045802 z: 18.48855
+x: -24.98473 y: -250.1374 z: -25.20611
+x: -31.81679 y: -170.8321 z: 35.36641
+x: -36.03053 y: -105.2977 z: 79.84733
+x: -80.12214 y: -197.2748 z: 60.56489
+x: -54.65649 y: -249.4198 z: 106.2748
+x: 73.03817 y: -111.4427 z: 59.35878
+x: 52.22901 y: 81.37404 z: -45.03817
+x: 15.53435 y: 22.45802 z: -21.93893
+x: -81.67175 y: 139.2977 z: 65.67175
+x: -141.0458 y: 10.38931 z: 54.66413
+```
+
+Result of Temperature Data:
+
+```
+Temperature: 32.48294°C
+Temperature: 32.57706°C
+Temperature: 32.48294°C
+Temperature: 32.53°C
+Temperature: 32.48294°C
+Temperature: 32.48294°C
+Temperature: 32.53°C
+Temperature: 32.57706°C
+Temperature: 32.57706°C
+Temperature: 32.53°C
+```
+
+Result of G-Force Data:
+```
+G-Force: 1.833724
+G-Force: 1.848333
+G-Force: 1.843979
+G-Force: 1.347741
+G-Force: 0.8332062
+G-Force: 2.14345
+G-Force: 1.266751
+G-Force: 0.9586555
+G-Force: 0.9757478
+G-Force: 1.224127
+```

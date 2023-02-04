@@ -2,29 +2,29 @@
 A very simple library and useful for GY-521 IMU 3-axis Accelerometer/Gyro Module (MPU6050) on ESP32 or ESP8266 using MicroPython
 
 # Usage
-Initializing the I2C method for ESP32
-Pin assignment:
-SCL -> GPIO 22
-SDA -> GPIO 21
-self.i2c = SoftI2C(scl=Pin(22), sda=Pin(21), freq=100000)
-        
-Initializing the I2C method for ESP8266
-Pin assignment:
-SCL -> GPIO 5
-SDA -> GPIO 4
-self.i2c = I2C(scl=Pin(5), sda=Pin(4))
-
+Initializing the I2C method for ESP32\
+Pin assignment:\
+SCL -> GPIO 22\
+SDA -> GPIO 21\
+self.i2c = SoftI2C(scl=Pin(22), sda=Pin(21), freq=100000)\
+##
+Initializing the I2C method for ESP8266\
+Pin assignment:\
+SCL -> GPIO 5\
+SDA -> GPIO 4\
+self.i2c = I2C(scl=Pin(5), sda=Pin(4))\
+##
 (You can change SCL pin and SDA pin in file MPU6050.py line 69-79)
-
-If you working with Thonny (https://thonny.org/). Don't forget to show plotter
-Thonny -> View -> Plotter
-If you want to see data_logs file.
-Thonny -> View -> Files
-
+##
+If you working with Thonny (https://thonny.org/). Don't forget to show plotter\
+Thonny -> View -> Plotter\
+If you want to see data_logs file.\
+Thonny -> View -> Files\
+##
 ## Example
-
-main.py is a very simple example to get started.
-Everytime you run the code it will keep data_logs{n} file in /
+##
+main.py is a very simple example to get started.\
+Everytime you run the code it will keep data_logs{n} file in root (/)\
 {n} means the file number increasing if old data_logs file exist.
 
 ```python
